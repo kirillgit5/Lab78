@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">kab78</string>
+    <string name="navigation_button_events_text">Events</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="navigation_button_profile_text">Profile</string>
+    <string name="navigation_button_holidays_text">Holidays</string>
+
+    <string name="about">About</string>
+    <string name="aboutLabel">About</string>
+    <string name="settingsLabel">Settings</string>
+    <string name="share_friends">Share with friend</string>
+
+    <string name="input_date_event">Date:</string>
+    <string name="choose_date_button">Choose date</string>
+    <string name="input_time_event">Time:</string>
+    <string name="choose_time_event">choose time</string>
+    <string name="add_event_button">Save</string>
+    <string name="edit">edit</string>
+    <string name="remove">remove</string>
+    <string name="shareFriends">Share with friend</string>
+    <string name="shareDescription">Great app</string>
+    <string name="input_name_event">Event name:</string>
+    <string name="input_descr_event">Description:</string>
+
+</resources>

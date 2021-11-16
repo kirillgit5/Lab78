@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.lab78.ui.addevent.AddEventVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/borderPaddingMedium"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+        <TextView
+                android:id="@+id/text_title_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_name_event"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/input_title_events"
+                app:layout_constraintBottom_toBottomOf="@id/input_title_events"/>
+
+        <EditText
+                android:id="@+id/input_title_events"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_title_events"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@={viewModel.titleObs}"
+        />
+
+        <TextView
+                android:id="@+id/text_description_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_descr_event"
+                app:layout_constraintTop_toTopOf="@id/input_description_events"
+                app:layout_constraintBottom_toBottomOf="@id/input_description_events"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+                android:id="@+id/input_description_events"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_description_events"
+                app:layout_constraintTop_toBottomOf="@id/input_title_events"
+                android:text="@={viewModel.descObs}"/>
+
+        <TextView
+                android:id="@+id/text_date_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_date_event"
+                app:layout_constraintTop_toTopOf="@id/date_button"
+                app:layout_constraintBottom_toBottomOf="@id/date_button"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+                android:id="@+id/input_date_events"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/date_button"
+                app:layout_constraintStart_toEndOf="@id/text_date_events"
+                app:layout_constraintTop_toTopOf="@+id/date_button"
+                android:text="@={viewModel.dateString}"/>
+
+        <Button
+                android:id="@+id/date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/input_date_events"
+                app:layout_constraintTop_toBottomOf="@id/input_description_events"
+                app:icon="@drawable/ic_baseline_calendar_today_24"
+                android:text="@string/choose_date_button"/>
+
+
+        <Button
+                android:id="@+id/button_add_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/add_event_button"
+                app:icon="@drawable/ic_baseline_add_24"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
